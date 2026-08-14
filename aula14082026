@@ -1,0 +1,41 @@
+namespace Comando_while
+
+    internal class Program {
+    static void Main(string[] args) {
+        const int FIM = 0;
+        int num, soma = 0, cont = 0;
+        double media;
+
+        num = LerNumero();
+        while (num != FIM) {
+            soma += num;
+            cont++;
+            num = LerNumero();
+        }
+        Console.WriterLine("Soma: " + soma);
+        if (cont != 0)
+        {
+            media = (double)soma / cont;
+            Console.WriteLine("Média: " + media);
+        } else {
+            Console.WriteLine("Erro: não foi possível calcular a média.");
+        }
+    }
+}
+
+namespace Comando_for {
+    
+    internal class Program {         
+        static void Main(string[] args) {
+            for(int i = 1; i <= 10; i++) {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine("\n");
+            int j = 1;
+            while (j <= 10) {
+                Console.WriteLine(j);
+                j++;
+            }
+        }
+    }
+}
